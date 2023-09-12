@@ -15,7 +15,7 @@ export const ProductsPage = () => {
         <h1 className="font-bold text-2xl">Product Dashboard</h1>
         <section className="grid grid-cols-4 gap-4">
             {product.map((item) => {
-                return <Card itemDetail={item} />
+                return <Card key={item.id} itemDetail={item} />
             })}
         </section>
     </main>

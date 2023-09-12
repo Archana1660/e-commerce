@@ -1,12 +1,12 @@
-import { useState } from "react"
-import { CartIcon } from "../atoms/CartIcon"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
+import { CartIcon } from "../atoms/CartIcon"
 
 export const CartCount = () => {
-    const [count, setCount] = useState(0)
+    const cartCount = useSelector(state => state.CART)
     return <div>
         <Link to="/cart">
-            <CartIcon /><span>{count}</span>
+            <CartIcon /><span>{cartCount.length}</span>
         </Link>
 
     </div>
