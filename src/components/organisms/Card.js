@@ -5,12 +5,12 @@ import './Card.css';
 
 export const Card = ({ itemDetail }) => {
     let itemImage = itemDetail?.image;
-    let itemDescription = itemDetail?.description;
+    let itemDescription = itemDetail?.price;
 
-    return <div className="card-section">
+    return <div className="shadow-lg rounded-xl p-10 card-section">
         <ProductImage itemImage={itemImage} />
         <div className="card-details">
-            <h5>{itemDetail.title}</h5>
+            <h5 className="font-bold">{itemDetail.title}</h5>
             <AboutImage itemDescription={itemDescription} />
             <Button />
         </div>

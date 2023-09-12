@@ -1,3 +1,3 @@
 export const AboutImage = ({ itemDescription: aboutImage }) => {
-    return <p>{aboutImage}</p>
+    return <p>INR: {aboutImage}</p>
 }
