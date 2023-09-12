@@ -1,3 +1,3 @@
-export const AboutImage = () => {
-    return <p>AboutImage</p>
+export const AboutImage = ({ itemDescription: aboutImage }) => {
+    return <p>INR: {aboutImage}</p>
 }
