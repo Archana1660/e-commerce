@@ -3,13 +3,23 @@ import { Card } from "../organisms/Card";
 import { useSelector, useDispatch } from "react-redux";
 import { add } from "../../store/CartSlice";
 import { getProducts } from "../../store/ProductSlice";
+import { StatusCode } from "../../utils/StatusCode";
 
 export const ProductsDashboardPage = () => {
     const dispatch = useDispatch()
-    const { data: products } = useSelector(state => state.PRODUCT)
+    const { data: products, status } = useSelector(state => state.PRODUCT)
+
     useEffect(() => {
         dispatch(getProducts())
     }, [])
+
+    if (status === StatusCode.LOADING) {
+        return <p>Loading...</p>
+    }
+
+    if (status === StatusCode.ERROR) {
+        return <p>Error...</p>
+    }
 
     const handleAddItemToCart = (itemDetail) => {
         dispatch(add(itemDetail))
