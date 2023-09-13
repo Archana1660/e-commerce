@@ -1,18 +1,25 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { Card } from "../organisms/Card";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { add } from "../../store/CartSlice";
+import { getProducts } from "../../store/ProductSlice";
+import { StatusCode } from "../../utils/StatusCode";
 
 export const ProductsDashboardPage = () => {
-    const [product, setProduct] = useState([]);
     const dispatch = useDispatch()
+    const { data: products, status } = useSelector(state => state.PRODUCT)
 
     useEffect(() => {
-        //api
-        fetch('https://fakestoreapi.com/products')
-            .then(data => data.json())
-            .then(result => setProduct(result))
+        dispatch(getProducts())
     }, [])
+
+    if (status === StatusCode.LOADING) {
+        return <p>Loading...</p>
+    }
+
+    if (status === StatusCode.ERROR) {
+        return <p>Error...</p>
+    }
 
     const handleAddItemToCart = (itemDetail) => {
         dispatch(add(itemDetail))
@@ -20,7 +27,7 @@ export const ProductsDashboardPage = () => {
     return <main>
         <h1 className="font-bold text-2xl">Product Dashboard</h1>
         <section className="grid grid-cols-4 gap-4">
-            {product.map((product) => {
+            {products?.map((product) => {
                 return <Card key={product.id} handleCart={handleAddItemToCart} itemDetail={product} isAddItemButton={true} />
             })}
         </section>
