@@ -3,6 +3,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import { ProductsDashboardPage } from './components/pages/ProductsDashboardPage';
 import { CartPage } from './components/pages/CartPage';
 import { RootLayout } from './components/templates/RootLayout';
+import { SubscribePage } from './components/pages/SubscribePage';
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -10,6 +11,7 @@ function App() {
       {/*Dashboard is a default component */}
       <Route index element={<ProductsDashboardPage />}></Route>
       <Route path='/cart' element={<CartPage />}></Route>
+      <Route path='/subscribe' element={<SubscribePage />}></Route>
     </Route>))
   return (
     <div className="App">
