@@ -2,25 +2,24 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { StatusCode } from "../utils/StatusCode";
 
 const initialState = {
-    data: [],
-    status: StatusCode.IDLE
+    productData: {},
+    status: 'idle'
 }
 
 const productSlice = createSlice({
     name: 'PRODUCT',
     initialState,
-    reducers: {
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(getProducts.pending, (state, action) => {
+            .addCase(getProductDetail.pending, (state, action) => {
                 state.status = StatusCode.LOADING
             })
-            .addCase(getProducts.fulfilled, (state, action) => {
-                state.data = action.payload;
-                state.status = StatusCode.IDLE
+            .addCase(getProductDetail.fulfilled, (state, action) => {
+                state.status = StatusCode.IDLE;
+                state.productData = action.payload
             })
-            .addCase(getProducts.rejected, (state, action) => {
+            .addCase(getProductDetail.rejected, (state, action) => {
                 state.status = StatusCode.ERROR
             })
     }
@@ -28,10 +27,10 @@ const productSlice = createSlice({
 
 export default productSlice.reducer
 
-export const getProducts = createAsyncThunk(
-    'PRODUCT/get', async () => {
-        const response = await fetch('https://fakestoreapi.com/products')
-        const result = await response.json()
+export const getProductDetail = createAsyncThunk(
+    'PRODUCT_DETAIL/GET', async (id) => {
+        const data = await fetch(`https://fakestoreapi.com/products/${id}`)
+        const result = await data.json();
         return result
     }
 )

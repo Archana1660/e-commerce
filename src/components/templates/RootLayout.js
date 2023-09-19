@@ -6,7 +6,9 @@ import store from "../../store/store"
 export const RootLayout = () => {
     return <main className="container mx-auto px-10">
         <Provider store={store}>
-            <NavBarPanel />
+            <header>
+                <NavBarPanel />
+            </header>
             <Outlet />
         </Provider>
     </main>

@@ -2,12 +2,12 @@ import { useEffect } from "react"
 import { Card } from "../organisms/Card";
 import { useSelector, useDispatch } from "react-redux";
 import { add } from "../../store/CartSlice";
-import { getProducts } from "../../store/ProductSlice";
+import { getProducts } from "../../store/ProductDashboardSlice";
 import { StatusCode } from "../../utils/StatusCode";
 
 export const ProductsDashboardPage = () => {
     const dispatch = useDispatch()
-    const { data: products, status } = useSelector(state => state.PRODUCT)
+    const { data: products, status } = useSelector(state => state.ALL_PRODUCT)
 
     useEffect(() => {
         dispatch(getProducts())
