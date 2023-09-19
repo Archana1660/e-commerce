@@ -1,6 +1,7 @@
 import './App.css';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import { ProductsDashboardPage } from './components/pages/ProductsDashboardPage';
+import { ProductPage } from './components/pages/ProductPage';
 import { CartPage } from './components/pages/CartPage';
 import { RootLayout } from './components/templates/RootLayout';
 import { SubscribePage } from './components/pages/SubscribePage';
@@ -12,6 +13,7 @@ function App() {
       <Route index element={<ProductsDashboardPage />}></Route>
       <Route path='/cart' element={<CartPage />}></Route>
       <Route path='/subscribe' element={<SubscribePage />}></Route>
+      <Route path='/product/:id' element={<ProductPage />}></Route>
     </Route>))
   return (
     <div className="App">

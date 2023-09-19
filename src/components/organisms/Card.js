@@ -1,6 +1,7 @@
 import { Button } from "../atoms/Button";
 import { ProductImage } from "../atoms/ProductImage";
 import { AboutImage } from "../atoms/AboutImage";
+import { Link } from "react-router-dom";
 
 import './Card.css';
 
@@ -11,7 +12,7 @@ export const Card = ({ handleCart, itemDetail, isAddItemButton = "true" }) => {
 
 
     return <div className="shadow-lg rounded-xl p-10 card-section">
-        <ProductImage itemImage={itemImage} />
+        <Link to={`/product/${itemDetail.id}`}> <ProductImage itemImage={itemImage} /></Link>
         <div className="card-details">
             <h5 className="font-bold">{itemDetail.title}</h5>
             <AboutImage itemDescription={itemDescription} />
