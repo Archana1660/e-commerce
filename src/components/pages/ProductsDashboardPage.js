@@ -24,12 +24,15 @@ export const ProductsDashboardPage = () => {
     const handleAddItemToCart = (itemDetail) => {
         dispatch(add(itemDetail))
     }
-    return <main>
-        <h1 className="font-bold text-2xl">Product Dashboard</h1>
-        <section className="grid grid-cols-4 gap-4">
-            {products?.map((product) => {
+    return <div className="flex items-center justify-center min-h-screen bg-cyan-50">
+        {/* <h1 className="font-bold text-2xl">Product Dashboard</h1> */}
+        <section className="bg-white p-6 m-3 shadow-2xl rounded-3xl md:p-40 
+       
+        ">
+            Hello
+            {/* {products?.map((product) => {
                 return <Card key={product.id} handleCart={handleAddItemToCart} itemDetail={product} isAddItemButton={true} />
-            })}
+            })} */}
         </section>
-    </main>
+    </div>
 }
