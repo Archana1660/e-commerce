@@ -1,6 +1,5 @@
 import { SearchInput } from "../atoms/SearchInput"
 import { CartCount } from "../molecules/CartCount"
-import { SearchInputAndButton } from "../molecules/SearchInputAndButton"
 import { Link } from "react-router-dom"
 
 export const NavBarPanel = () => {
