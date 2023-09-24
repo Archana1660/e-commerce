@@ -24,15 +24,17 @@ export const ProductsDashboardPage = () => {
     const handleAddItemToCart = (itemDetail) => {
         dispatch(add(itemDetail))
     }
-    return <div className="flex items-center justify-center min-h-screen bg-cyan-50">
+    return <div className="flex items-center justify-center min-h-screen ">
         {/* <h1 className="font-bold text-2xl">Product Dashboard</h1> */}
-        <section className="bg-white p-6 m-3 shadow-2xl rounded-3xl md:p-40 
+        <section className="bg-cyan-50 p-6 m-2 shadow-2xl rounded-3xl md:p-20 
        
         ">
-            Hello
-            {/* {products?.map((product) => {
-                return <Card key={product.id} handleCart={handleAddItemToCart} itemDetail={product} isAddItemButton={true} />
-            })} */}
+            <div className="grid gap-5 md:grid-cols-3">
+                {products?.map((product) => {
+                    return <Card key={product.id} handleCart={handleAddItemToCart} itemDetail={product} isAddItemButton={true} />
+                })}
+            </div>
+
         </section>
     </div>
 }
