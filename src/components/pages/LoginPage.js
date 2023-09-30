@@ -13,7 +13,8 @@ const LoginPage = () => {
                     <p className='max-w-sm font-sans font-light text-gray-500'>Log in to your account to avail all the discounts for shopping </p>
                     <form action='' method='post'>
                         <input type='email' className='border border-gray-600 rounded-lg p-3 w-full placeholder:font-sans placeholder:font-light' placeholder='Enter your email address' />
-                        <div className='flex flex-col items-center justify-between space-y-3 mt-5 text-cyan-700 font-thin md:flex-row md:space-y-0'>
+                        <input type='password' className='border border-gray-600 rounded-lg p-3 w-full placeholder:font-sans placeholder:font-light my-5' placeholder='Enter your password' />
+                        <div className='flex flex-col items-center justify-between space-y-3 text-cyan-700 font-thin md:flex-row md:space-y-0'>
                             <p className=''>Forgot password</p>
                             <button className='bg-cyan-500 text-white px-5 py-3 rounded-lg w-full md:w-auto'>Next</button>
                         </div>
