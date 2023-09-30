@@ -16,7 +16,6 @@ export const ProductPage = () => {
     }, [])
 
     return <main >
-        <h1 className="font-bold text-2xl">Product Dashboard</h1>
         <section className="flex items-center justify-center min-h-screen">
             <div className="flex flex-col p-6 m-3 space-y-10 rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
                 <div>
