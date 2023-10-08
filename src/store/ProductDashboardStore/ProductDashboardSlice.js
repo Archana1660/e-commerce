@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { StatusCode } from "../utils/StatusCode";
+import { StatusCode } from "../../utils/StatusCode";
 
 const initialState = {
     data: [],
@@ -29,9 +29,15 @@ const productDashboardSlice = createSlice({
 export default productDashboardSlice.reducer
 
 export const getProducts = createAsyncThunk(
-    'PRODUCT/get', async () => {
-        const response = await fetch('https://fakestoreapi.com/products')
-        const result = await response.json()
+    'PRODUCT/get',
+    async (category) => {
+        console.log({ category })
+        let allCategoryURL = 'https://fakestoreapi.com/products'
+        let categoriesURL = `https://fakestoreapi.com/products/category/${category}`
+        let apiURL = category ? categoriesURL : allCategoryURL;
+        let respose = await fetch(apiURL)
+        let result = await respose.json()
+        console.log(result)
         return result
     }
 )
