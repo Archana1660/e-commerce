@@ -43,9 +43,6 @@ export const ProductPage = () => {
                 </div>
 
             </div>
-            {/* {product.map((item) => {
-                return <Card key={item.id} itemDetail={item} addItemButton="true" />
-            })} */}
         </section>
     </main>
 }
