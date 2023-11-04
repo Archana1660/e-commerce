@@ -10,7 +10,6 @@ export const ProductPage = () => {
     const data = useSelector(state => state.PRODUCT.productData);
     const params = useParams() //what is params?
 
-    console.log({ data })
     useEffect(() => {
         dispatch(getProductDetail(params.id))
     }, [])
