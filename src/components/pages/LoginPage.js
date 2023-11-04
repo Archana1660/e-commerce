@@ -19,7 +19,7 @@ const LoginPage = () => {
             <div className='relative flex flex-col m-6 space-y-4 bg-white shadow-2xl rounded-lg md:flex-row md:space-y-0 '>
                 <div className='p-10 flex flex-col space-y-5 md:p-20'>
                     <h2 className='font-mono font-bold text-4xl mt-4'>Log In</h2>
-                    <p className='max-w-sm font-sans font-light text-gray-500'>Log in to your account to avail all the discounts for shopping </p>
+                    <p className='max-w-sm font-sans font-light text-gray-500'>Log in to your account to avail all the exciting discounts waiting for you! </p>
                     <form action='' method='post' onSubmit={(e) => handleFormSubmit(e)}>
                         <input type='text' className='border border-gray-600 rounded-lg p-3 w-full placeholder:font-sans placeholder:font-light' placeholder='Enter your user name' onChange={(e) => {
                             return setUserCredential({ ...userCredential, username: e.target.value })
@@ -28,7 +28,7 @@ const LoginPage = () => {
                             return setUserCredential({ ...userCredential, password: e.target.value })
                         }} />
                         <div className='flex flex-col items-center justify-between space-y-3 text-cyan-700 font-thin md:flex-row md:space-y-0'>
-                            <div className='group relative w-56'>
+                            <div className='group relative'>
                                 <WorkInProgress />
                                 <p className=''>Forgot password</p>
                             </div>
