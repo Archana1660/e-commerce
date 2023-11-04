@@ -28,10 +28,10 @@ const LoginPage = () => {
                             return setUserCredential({ ...userCredential, password: e.target.value })
                         }} />
                         <div className='flex flex-col items-center justify-between space-y-3 text-cyan-700 font-thin md:flex-row md:space-y-0'>
-                            <div className='group relative'>
+                            <Link className='group relative'>
                                 <WorkInProgress />
-                                <p className=''>Forgot password</p>
-                            </div>
+                                <p>Forgot password</p>
+                            </Link>
                             <button className='bg-cyan-500 text-white px-5 py-3 rounded-lg w-full md:w-auto active:bg-cyan-700'>Next</button>
                         </div>
                     </form>
