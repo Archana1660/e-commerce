@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/e-commerce/static/css/main.e68fcea0.css",
+    "main.js": "/e-commerce/static/js/main.4fd1294f.js",
+    "static/js/787.46493d11.chunk.js": "/e-commerce/static/js/787.46493d11.chunk.js",
+    "static/media/work-in-progress.gif": "/e-commerce/static/media/work-in-progress.1c0ee81a8fdc2940126a.gif",
+    "static/media/loginShopping.jpg": "/e-commerce/static/media/loginShopping.866318baf222091518c4.jpg",
+    "static/media/gmail-logo.png": "/e-commerce/static/media/gmail-logo.491b662595dc95ef157a.png",
+    "static/media/searchIcon.png": "/e-commerce/static/media/searchIcon.9313d9066efb955a1e28.png",
+    "static/media/shopping-cart.jpg": "/e-commerce/static/media/shopping-cart.7e9c10a1a488f0635c16.jpg",
+    "static/media/cartIcon.png": "/e-commerce/static/media/cartIcon.eca5ee08f37494f3f691.png",
+    "index.html": "/e-commerce/index.html",
+    "main.e68fcea0.css.map": "/e-commerce/static/css/main.e68fcea0.css.map",
+    "main.4fd1294f.js.map": "/e-commerce/static/js/main.4fd1294f.js.map",
+    "787.46493d11.chunk.js.map": "/e-commerce/static/js/787.46493d11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e68fcea0.css",
+    "static/js/main.4fd1294f.js"
+  ]
+}
