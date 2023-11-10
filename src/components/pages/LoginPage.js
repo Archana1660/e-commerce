@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
 import { getLoginDetail } from '../../store/LoginSlice';
 import { WorkInProgress } from '../molecules/WorkInProgress';
@@ -9,6 +9,12 @@ import gmailLogo from '../../assets/gmail-logo.png';
 
 const LoginPage = () => {
     const dispatch = useDispatch()
+    const { loginData } = useSelector(state => state.LOGIN)
+    if (loginData?.token) {
+        window.localStorage.setItem('token', loginData.token)
+
+    }
+
     const [userCredential, setUserCredential] = useState({ username: null, password: null })
     const handleFormSubmit = (e) => {
         e.preventDefault()
