@@ -25,7 +25,7 @@ function App() {
         <Route path="/women's clothing" element={<ProductsDashboardPage category="women's clothing" />}></Route>
       </Route>
     </>
-  ), { basename: "/e-commerce" })
+  ))
   return (
     <div className="App">
       <Provider store={store}>
