@@ -15,7 +15,7 @@ export const ProductsDashboardPage = ({ category }) => {
         } else {
             dispatch(getProducts())
         }
-    }, [category])
+    }, [category, dispatch])
 
     if (status === StatusCode.LOADING) {
         return <p>Loading...</p>

@@ -11,7 +11,7 @@ export const NavBarPanel = () => {
 
     useEffect(() => {
         dispatch(getAllProductCategories())
-    }, [])
+    }, [dispatch])
 
     return <div><nav className="flex items-center  p-4 m-2 justify-around">
         <ul className="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-3 ">

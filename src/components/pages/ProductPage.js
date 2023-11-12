@@ -12,7 +12,7 @@ export const ProductPage = () => {
 
     useEffect(() => {
         dispatch(getProductDetail(params.id))
-    }, [])
+    }, [dispatch, params])
 
     return <main >
         <section className="flex items-center justify-center min-h-screen">
